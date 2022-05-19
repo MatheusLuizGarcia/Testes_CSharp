@@ -1,17 +1,21 @@
-using System;
+﻿int fib = 0;
+int ini = 1;
+int add = 0;
+int x;
+int arg;
+Console.WriteLine("Algoritmo para calcular a sequência de Fibonacci segundo o número de argumentos");
+Console.WriteLine("Insira o número de argumentos a ser calculado:");
+arg = Convert.ToInt32(Console.ReadLine());
+x = arg;
+if (x > 1)
 {
-    Console.WriteLine("insira quantos números deseja calcular:");
-    int x = Convert.ToInt32(Console.ReadLine());
-    int fib = 0;
-    int add = 0;
-    int ini = 1;
-    while (x != 0)
+    while (x > 1)
     {
         fib = ini + add;
-        ini = fib;
         add = ini;
+        ini = fib;
         --x;
     }
-    Console.WriteLine("número da sequência: " + fib);
-    Console.ReadKey();
 }
+Console.WriteLine(arg + " argumento: " + fib);
+Console.WriteLine("fim do código");
